@@ -7,8 +7,44 @@
 body {
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
+    rgb(210, 108, 64) 0%,
+    rgb(157, 176, 122) 35%,
     rgba(0, 212, 255, 1) 100%
   );
+  text-align: center;
+  margin-top: 200px;
+}
+
+.question {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.options {
+  padding: 20px;
+}
+
+button {
+  display: inline-block;
+  width: 500px;
+  background-color: rgb(175, 135, 165);
+  border-radius: 20%;
+  letter-spacing: 2px;
+  font-style: oblique;
+  padding: 15px;
+  margin: 10px;
+}
+
+#next-button {
+  background-color: cadetblue;
+  width: 250px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
