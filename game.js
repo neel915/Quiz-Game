@@ -21,9 +21,9 @@ question.textContent = firstQuestion.text;
 
 // // Pour chaque option, créer un bouton et l'ajouter au conteneur
 firstQuestion.options.forEach(optiontext => {
-const optionsButton = document.createElement('button');
-optionsButton.textContent = optiontext ;
-optionsButton.classList.add('button-container');
-options.appendChild(optionsButton);
+const optionsButton = document.createElement('button');// Créez un bouton pour chaque option
+optionsButton.textContent = optiontext ;// Assignez le texte de l'option au bouton
+optionsButton.classList.add('button-container');// Ajoutez une classe pour styliser si nécessaire
+options.appendChild(optionsButton); // Ajoutez le bouton au conteneur d'options
 })
 console.log(options);
