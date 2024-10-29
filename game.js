@@ -4,13 +4,15 @@ console.log(cultureGeneral.questions[0]);
 // Récupérer les emplacements pour injecter la question et les options
 const question = document.querySelector('question');
 const options = document.querySelector('options');
-const Correct1 = document.getElementById('Correct1');
-const nextButton = document.getElementById('nextButton');
+const correct_answer = document.querySelector('Correct_answer');
+const container = document.getElementById('button-container');
+const nextButton = document.createElement('button');
+//const nextButton = document.getElementById('nextButton');
 console.log(question);
 
 // Récupérer la première question
-//const firstQuestion = cultureGeneral.questions[0];
-//console.log(firstQuestion)
+const firstQuestion = cultureGeneral.questions[0];
+console.log(firstQuestion)
 
 //ETAPE EN COURS, A REVENIR DESSUS
 // Injecter le texte de la question dans l'emplacement dédié
@@ -18,22 +20,10 @@ console.log(question);
 //console.log();
 
 // // Pour chaque option, créer un bouton et l'ajouter au conteneur
-cultureGeneral.options.forEach((question) => {
-    console.log('question:',
-        question.text1 ||
-        question.text2 ||
-        question.text3 ||
-        question.text4 ||
-        question.text5 
-
-
-);
-    console.log(question.options);
-    console.log(question.correct_answer);
-});
-
-// const optionsButton = document.querySelector('button');
-// _________.innerText = __________;
-// _________.classList.add('__________');
-// __________.appendChild(__________);
-// }
+firstQuestion.options.forEach(option => {
+const optionsButton = document.createElement('button');
+optionsButton.innerHTML = options ;
+options.classList.add('button-container');
+correct_answer.appendChild(nextButton);
+})
+console.log(options);
