@@ -9,22 +9,46 @@
     <script src="game.js" type="module"></script>
   </head>
   <body>
-    <div id="quiz-container">
-      <!-- Section pour la question -->
-      <div class="question">Qui est le président français actuel?</div>
-      <!-- Section pour les options -->
-      <div class="options">
-        <!-- La réponse correcte-->
+    <!-- <div id="quiz-container">
+      Section pour la question -->
+     <!-- <div class="question"></div>
+       Section pour les options -->
+      <!--<div class="options">
+         La réponse correcte-->
         <!-- <button id="Correct1">Emmanuel Macron</button><br />
         <button>François Mitterrand</button><br />
         <button>Jacques Chirac</button><br />
         <button>Nicolas Sarkozy</button><br /> -->
-      </div>
+      <!--</div>
 
-      <!-- Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
-      <div class="button-container">
+       Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
+      <!--<div class="button-container">
       <button id="nextButton">Suivant</button>
       </div>
-    </div>
+    </div> -->
+
+
+
+      <div id="quiz-container">
+       
+        <div class="question" id="question-text">
+          <!-- La question sera injectée ici par JavaScript -->
+        </div>
+    
+        
+        <div class="options" id="options-container">
+          <!-- Les options seront injectées ici par JavaScript -->
+        </div>
+    
+       
+        <div class="button-container">
+          <button id="next-button">Suivant</button>
+        </div>
+      </div>
+      
+      <!-- Importe ici ton fichier JavaScript -->
+      <script type="module" src="game.js"></script>
+      
+    
   </body>
 </html>
