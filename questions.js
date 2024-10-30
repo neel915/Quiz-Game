@@ -11,25 +11,41 @@ export const cultureGeneral = {
       correct_answer: "Emmanuel Macron",
     },
     {
-      text: "Question 2 ?",
-      options: ["Réponse 1", "Réponse 2", "Réponse 3", "Réponse 4"],
-      correct_answer: "Réponse 2",
+      text: "Combien de temps à durer la 1ère Guerre Mondiale ?",
+      options: [
+        "6 Ans",
+        "4 Ans",
+        "8 Ans",
+        "10 Ans"],
+      correct_answer: "4 Ans",
     },
     // Autres questions...
     {
-      text: "Question 3 ?",
-      options: ["Réponse 1", "Réponse 2", "Réponse 3", "Réponse 4"],
-      correct_answer: "Réponse 3",
+      text: "Quel est le symbole chimique de l'or ?",
+      options: [
+        "Ag", 
+        "Fe", 
+        "Au", 
+        "Hg"],
+      correct_answer: "Au",
     },
     {
-      text: "Question 4 ?",
-      options: ["Réponse 1", "Réponse 2", "Réponse 3", "Réponse 4"],
-      correct_answer: "Réponse 4",
+      text: "Quel est le plus grand océan du monde ?",
+      options: [
+        "Atlantique", 
+        "Indien", 
+        "Arctique", 
+        "Pacifique"],
+      correct_answer: "Pacifique",
     },
     {
-      text: "Question 5 ?",
-      options: ["Réponse 1", "Réponse 2", "Réponse 3", "Réponse 4"],
-      correct_answer: "Réponse 1",
+      text: "Quel est le plus grand désert du monde ?",
+      options: [
+        "Kalahari", 
+        "Antarctique", 
+        "Gob", 
+        "Sahara"],
+      correct_answer: "Antarctique",
     },
   ],
 };
