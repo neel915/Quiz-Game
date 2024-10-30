@@ -39,9 +39,11 @@ let currentQuestionIndex = 0; // Commence à la première question
 const text = document.getElementById('question-text');
 const container = document.getElementById('options-container');
 const next = document.getElementById('next-button');
+const replay = document.getElementById('replay-button')
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion() {
+
   // Vider le conteneur des options
   container.innerHTML = '';
 
@@ -63,20 +65,43 @@ console.log(currentQuestion)
 
 // Ajouter un écouteur d'événements pour le bouton "Suivant"
 next.addEventListener('click', () => {
+
   // Incrémenter l'index de la question
   currentQuestionIndex++;
 
   // Vérifier s'il reste des questions
   if (currentQuestionIndex < cultureGeneral.questions.length) {
+
     // Afficher la question suivante
     loadQuestion();
+
   } else {
     // Si plus de questions, indiquer la fin du quiz
     text.innerText = 'Fin du Quiz';
     options.innerHTML = ''; // Effacer les options
     next.style.display = 'none'; // Cacher le bouton Suivant
-  }
-});
+    replay.style.display = 'inline-block'; // Afficher le bouton Suivant
+
+ } })
+
+ // Fonction pour réinitialiser le quiz
+replay.addEventListener('click', () => {
+
+    // TODO Réinitialiser l'index 
+    currentQuestionIndex = 0;
+
+    // TODO Cacher le bouton Rejouer et afficher le bouton Suivant
+    next.style.display = 'inline-block'; // Afficher le bouton Suivant
+    replay.style.display = 'none'; // Cacher le bouton rejouer
+
+
+    // TODO Recharger la première question
+    loadQuestion();
+
+    
+  });
+
+
 
 // Charger la première question au chargement de la page
 loadQuestion();
