@@ -8,44 +8,28 @@ export const cultureGeneral = {
         "Nicolas Sarkozy",
         "Emmanuel Macron",
       ],
-      correct_answer: "Emmanuel Macron",
+      correctAnswer: "Emmanuel Macron",
     },
     {
       text: "Combien de temps à durer la 1ère Guerre Mondiale ?",
-      options: [
-        "6 Ans",
-        "4 Ans",
-        "8 Ans",
-        "10 Ans"],
-      correct_answer: "4 Ans",
+      options: ["6 Ans", "4 Ans", "8 Ans", "10 Ans"],
+      correctAnswer: "4 Ans",
     },
     // Autres questions...
     {
       text: "Quel est le symbole chimique de l'or ?",
-      options: [
-        "Ag", 
-        "Fe", 
-        "Au", 
-        "Hg"],
-      correct_answer: "Au",
+      options: ["Ag", "Fe", "Au", "Hg"],
+      correctAnswer: "Au",
     },
     {
       text: "Quel est le plus grand océan du monde ?",
-      options: [
-        "Atlantique", 
-        "Indien", 
-        "Arctique", 
-        "Pacifique"],
-      correct_answer: "Pacifique",
+      options: ["Atlantique", "Indien", "Arctique", "Pacifique"],
+      correctAnswer: "Pacifique",
     },
     {
       text: "Quel est le plus grand désert du monde ?",
-      options: [
-        "Kalahari", 
-        "Antarctique", 
-        "Gob", 
-        "Sahara"],
-      correct_answer: "Antarctique",
+      options: ["Kalahari", "Antarctique", "Gob", "Sahara"],
+      correctAnswer: "Antarctique",
     },
   ],
 };

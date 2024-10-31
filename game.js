@@ -1,50 +1,67 @@
-'use strict';
+"use strict";
 
-import { cultureGeneral } from './questions.js';
+import { cultureGeneral } from "./questions.js";
 console.log(cultureGeneral.questions[0]);
 // Récupérer les emplacements pour injecter la question et les options
-const question = document.querySelector('.question');
-const options = document.querySelector('.options');
+const question = document.querySelector(".question");
+const options = document.querySelector(".options");
 // Récupérer la première question
 const firstQuestion = cultureGeneral.questions[0];
 // Sélection des éléments HTML
-const text = document.getElementById('question-text');
-const container = document.getElementById('options-container');
-const next = document.getElementById('next-button');
-const replay = document.getElementById('replay-button')
+const text = document.getElementById("question-text");
+const container = document.getElementById("options-container");
+const next = document.getElementById("next-button");
+const replay = document.getElementById("replay-button");
+
 // Variables pour suivre l'état du quiz
 let currentQuestionIndex = 0; // Commence à la première question
 
 // Injecter le texte de la question dans l'emplacement dédié
 question.textContent = firstQuestion.text;
-//console.log();
+
 //Pour chaque option, créer un bouton et l'ajouter au conteneur
-firstQuestion.options.forEach(optiontext => {
-const optionsButton = document.createElement('button');// Créez un bouton pour chaque option
-optionsButton.textContent = optiontext ;// Assignez le texte de l'option au bouton
-optionsButton.classList.add('button-container');// Ajoutez une classe pour styliser si nécessaire
-options.appendChild(optionsButton); // Ajoutez le bouton au conteneur d'options
-})
+firstQuestion.options.forEach((optiontext) => {
+  const optionsButton = document.createElement("button"); // Créez un bouton pour chaque option
+  optionsButton.textContent = optiontext;
+  // Assignez le texte de l'option au bouton
+  optionsButton.classList.add("button-container"); // Ajoutez une classe pour styliser si nécessaire
+  options.appendChild(optionsButton); // Ajoutez le bouton au conteneur d'options
+});
 
 // Fonction pour afficher une question basée sur l'index actuel
 function loadQuestion() {
   // Vider le conteneur des options
-  container.innerHTML = '';
+  container.innerHTML = "";
   // Récupérer la question actuelle
   const currentQuestion = cultureGeneral.questions[currentQuestionIndex];
-console.log(currentQuestion)
+  console.log(currentQuestion);
   // Injecter la question dans le HTML
-  text.innerText = currentQuestion.text
+  text.innerText = currentQuestion.text;
   // Injecter les options dans le HTML
-  currentQuestion.options.forEach(optiontext => {
-    const optionsButton = document.createElement('button');
+  currentQuestion.options.forEach((optiontext) => {
+    const optionsButton = document.createElement("button");
     optionsButton.innerText = optiontext;
-    optionsButton.classList.add('button-container');
+    optionsButton.classList.add("button-container");
     container.appendChild(optionsButton);
-  })};
+  });
+}
 
-// Ajouter un écouteur d'événements pour le bouton "Suivant"
-next.addEventListener('click', () => {
+// Etape 7 => function checkAnswer()
+// // optionsButton.addEventListener("click", () => {
+//   if (
+//     questions.options ===
+//     cultureGeneral.questions[currentQuestionIndex].correctAnswer
+//   ) {
+//     alert("Your answer is correct ");
+//     options.style.backgroundColor = "green"; // Afficher le bouton Suivant
+//   } else {
+//     alert("Your answer is wrong!");
+//     ourButtons.style.backgroundColor = "red";
+//   }
+// });
+
+// // Ajouter un écouteur d'événements pour le bouton "Suivant"
+next.addEventListener("click", () => {
   // Incrémenter l'index de la question
   currentQuestionIndex++;
   // Vérifier s'il reste des questions
@@ -53,29 +70,37 @@ next.addEventListener('click', () => {
     loadQuestion();
   } else {
     // Si plus de questions, indiquer la fin du quiz
-    text.innerText = 'Fin du Quiz';
-    options.innerHTML = ''; // Effacer les options
-    next.style.display = 'none'; // Cacher le bouton Suivant
-    replay.style.display = 'inline-block'; // Afficher le bouton Suivant
- }})
-
- // Fonction pour réinitialiser le quiz
-replay.addEventListener('click', () => {
-    // TODO Réinitialiser l'index
-    currentQuestionIndex = 0;
-    // TODO Cacher le bouton Rejouer et afficher le bouton Suivant
-    next.style.display = 'inline-block'; // Afficher le bouton Suivant
-    replay.style.display = 'none'; // Cacher le bouton rejouer
-    // TODO Recharger la première question
-    loadQuestion();
+    text.innerText = "Fin du Quiz";
+    options.innerHTML = ""; // Effacer les options
+    next.style.display = "none"; // Cacher le bouton Suivant
+    replay.style.display = "inline-block"; // Afficher le bouton Suivant
+  }
 });
 
-// Charger la première question au chargement de la page
+// Fonction pour réinitialiser le quiz
+replay.addEventListener("click", () => {
+  // TODO Réinitialiser l'index
+  currentQuestionIndex = 0;
+  // TODO Cacher le bouton Rejouer et afficher le bouton Suivant
+  if (ourButtons === questions.correctAnswer) {
+    alert("Your answer is correct ");
+  } else {
+    alert("Your answer is wrong!");
+  }
+  next.style.display = "inline-block"; // Afficher le bouton Suivant
+  replay.style.display = "none"; // Cacher le bouton rejouer
+  // TODO Recharger la première question
+  loadQuestion();
+});
+
+// Points
+
 loadQuestion();
-
-
-
-
-
-
-
+const buttons = document.querySelectorAll("button.button-container");
+// console.log(buttons);
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    alert("here!");
+    //@TODO On grise tout les boutons de réponse
+  });
+});

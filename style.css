@@ -48,3 +48,11 @@ button:hover {
   border: 2px solid black;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
