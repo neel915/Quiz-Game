@@ -6,51 +6,32 @@
     <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css" />
     <!--<script src="questions.js"></script>-->
-
   </head>
   <body>
-    <!-- <div id="quiz-container">
-      Section pour la question -->
-     <!-- <div class="question"></div>
-       Section pour les options -->
-      <!--<div class="options">
-         La réponse correcte-->
-        <!-- <button id="Correct1">Emmanuel Macron</button><br />
-        <button>François Mitterrand</button><br />
-        <button>Jacques Chirac</button><br />
-        <button>Nicolas Sarkozy</button><br /> -->
-      <!--</div>
+    <div class="timer">
+      <h1 id="countdown">60</h1>
+      <p class="paragraph">Seconds remaining &#128512;</p>
+    </div>
+    <div id="quiz-container">
+      <div class="progress-bar-container" id="progress-bar"></div>
 
-       Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
-      <!--<div class="button-container">
-      <button id="nextButton">Suivant</button>
+      <!--la barre de progression sera injectée ici par JavaScript-->
+      <label for="ProgressBar">File progress:</label>
+
+      <progress id="ProgressBar" max="100" value="0">0%</progress>
+
+      <div class="question" id="question-text">
+        <!-- La question sera injectée ici par JavaScript -->
       </div>
-    </div> -->
-
-
-
-      <div id="quiz-container">
-       
-        <div class="question" id="question-text">
-          <!-- La question sera injectée ici par JavaScript -->
-        </div>
-    
-        
-        <div class="options" id="options-container">
-          <!-- Les options seront injectées ici par JavaScript -->
-        </div>
-    
-       
-        <div class="button-container">
-          <button id="next-button">Suivant</button>
-        </div>
+      <div class="options" id="options-container">
+        <!-- Les options seront injectées ici par JavaScript -->
       </div>
-
-      <button id="replay-button" style="display: none;">Rejouer</button> 
-      
-      <!-- Importe ici ton fichier JavaScript -->
-      <script type="module" src="game.js"></script>
-      
-    
+      <div class="button-container">
+        <button id="next-button">Suivant</button>
+      </div>
+    </div>
+    <button id="replay-button" style="display: none">Rejouer</button>
+    <!-- Importe ici ton fichier JavaScript -->
+    <script type="module" src="game.js"></script>
   </body>
 </html>

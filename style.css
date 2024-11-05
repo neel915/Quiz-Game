@@ -15,6 +15,30 @@ body {
   margin-top: 200px;
 }
 
+/* Timer ----------------------------------- */
+.timer {
+  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+  text-align: center;
+  justify-content: center;
+  /* background: rgb(0, 212, 255, 1); */
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.paragraph {
+  font-size: 35px;
+}
+
 .question {
   font-size: 40px;
   font-family: "Times New Roman", Times, serif;
