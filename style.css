@@ -5,12 +5,11 @@
 }
 
 body {
-  background-color: blueviolet;
-  /*background: linear-gradient(
-    /* 90deg,
+  background: linear-gradient(
+    90deg,
     rgb(210, 108, 64) 0%,
     rgb(157, 176, 122) 35%,
-    rgba(0, 212, 255, 1) 100% */
+    rgba(0, 212, 255, 1) 100%
   );
   text-align: center;
   margin-top: 200px;
@@ -51,9 +50,18 @@ button:hover {
 }
 
 .correct {
-  background-color: green;
+  background-color: hsl(120, 28%, 75%);
+  color: azure;
+  ani
 }
 
 .incorrect {
-  background-color: red;
+  background-color: rgb(219, 89, 89);
+  color: azure;
+}
+
+
+.navbar button{
+  width: 300px;
+  display: inline-block;
 }

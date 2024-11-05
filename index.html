@@ -6,30 +6,20 @@
     <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css" />
     <!--<script src="questions.js"></script>-->
-
   </head>
-  <body>
-    <!-- <div id="quiz-container">
-      Section pour la question -->
-     <!-- <div class="question"></div>
-       Section pour les options -->
-      <!--<div class="options">
-         La réponse correcte-->
-        <!-- <button id="Correct1">Emmanuel Macron</button><br />
-        <button>François Mitterrand</button><br />
-        <button>Jacques Chirac</button><br />
-        <button>Nicolas Sarkozy</button><br /> -->
-      <!--</div>
 
-       Prévois déjà le design du bouton "suivant" pour passer à la prochaine question -->
-      <!--<div class="button-container">
-      <button id="nextButton">Suivant</button>
-      </div>
-    </div> -->
-
-
-
+   <body>
+    <h1>Choisissez un thème!</h1>
+  <header >
+    <nav class="navbar">
+      <button data-quiz-name="culturegenerale">Culture Générale</button>
+      <button data-quiz-name="informatique">Informatique</button>
+      <button data-quiz-name="cinema">Cinema</button>
+    </nav>
+  </header>
+   <section>
       <div id="quiz-container">
+        
        
         <div class="question" id="question-text">
           <!-- La question sera injectée ici par JavaScript -->
@@ -47,10 +37,11 @@
       </div>
 
       <button id="replay-button" style="display: none;">Rejouer</button> 
-      
+    </section>
       <!-- Importe ici ton fichier JavaScript -->
       <script type="module" src="game.js"></script>
+      <!--<script type="module" src="game2.js"></script>-->
       
     
   </body>
-</html>
+</html> 
