@@ -12,7 +12,31 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
   text-align: center;
-  margin-top: 200px;
+  margin-top: 20px;
+}
+
+/* Timer ----------------------------------- */
+.timer {
+  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+  text-align: center;
+  justify-content: center;
+  /* background: rgb(0, 212, 255, 1); */
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.paragraph {
+  font-size: 35px;
 }
 
 .question {
@@ -50,13 +74,13 @@ button:hover {
 }
 
 .correct {
-  background-color: hsl(120, 28%, 75%);
+  background-color: hsl(120, 44%, 70%);
   color: azure;
-  ani
+  
 }
 
 .incorrect {
-  background-color: rgb(219, 89, 89);
+  background-color :rgb(218, 74, 74);
   color: azure;
 }
 
@@ -64,4 +88,6 @@ button:hover {
 .navbar button{
   width: 300px;
   display: inline-block;
+  background-color: rgb(131, 131, 198);
+  color: azure;
 }
