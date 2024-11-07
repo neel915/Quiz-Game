@@ -10,7 +10,7 @@ const next = document.getElementById("next-button"); // Récupère le bouton "Su
 const replay = document.getElementById("replay-button"); // Récupère le bouton "Rejouer"
 const progressBar = document.getElementById("progress-bar"); // Selection de la barre de progression
 
-let countdownTime = 20; // Définir le temps du compte à rebours en secondes
+let countdownTime = 29; // Définir le temps du compte à rebours en secondes
 let currentQuiz = null; // Variable pour stocker le quiz actuel sélectionné 
 let score = 0; // Variable pour garder la trace du score
 let currentQuestionIndex = 0; // Variable pour l'index de la question actuelle
@@ -43,6 +43,8 @@ document.querySelectorAll(".navbar button").forEach((button) => { // Sélectionn
     loadQuiz(button.dataset.quizName);    
   });
 });
+
+
 let timeLeft = countdownTime;
 const countdownElement = document.getElementById("countdown");
 const pTimer = document.querySelector(".paragraph");
@@ -51,7 +53,8 @@ let startCountdown = () => {
    interval = setInterval(() => {
     if (timeLeft <= 0 ) {
       clearInterval(interval);
-      countdownElement.innerText = "Time's up: 😢!";
+      countdownElement.innerText = "Temps restant: 😢!";
+      text.innerHTML = `Temps ecoulé ! Votre score est : ${score} sur ${currentQuiz.questions.length}`; //@TODO A revoir avec l'équipe
       // next.disabled = true;
       // optionsButton.disabled = true;
       pTimer.style.display = "none"; //  Hide the remaining text
@@ -66,7 +69,7 @@ let startCountdown = () => {
     }
   }, 1000);
 };
-startCountdown();
+startCountdown();// @TODO revoir lemplacement de lapl pour que le decompte commence quant on commence à repondre
 
 // Fonction pour afficher une question en fonction de l'index courant
 function loadQuestion() {
@@ -85,6 +88,7 @@ function loadQuestion() {
     optionsButton.classList.add("button-container"); // Ajoute une classe pour le style
     
     optionsButton.addEventListener("click", () => { // Ajoute un événement de clic sur le bouton
+      //startCountdown(); //@TODO A revoir avec l'équipe
       if (optionText === currentQuestion.correctAnswer) { // Vérifie si la réponse est correcte
         optionsButton.classList.add("correct"); // Ajoute une classe pour indiquer la bonne réponse
         score++; // Incrémente le score
@@ -94,6 +98,7 @@ function loadQuestion() {
       Array.from(container.children).forEach((btn) => (btn.disabled = true)); // Désactive tous les boutons d'options
       
       next.disabled = false; // Active le bouton "Suivant"
+      
     });
     container.appendChild(optionsButton); // Ajoute le bouton d'option au conteneur
   });

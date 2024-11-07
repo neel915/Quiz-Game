@@ -7,27 +7,60 @@
 body {
   background: linear-gradient(
     90deg,
-    rgb(210, 108, 64) 0%,
-    rgb(157, 176, 122) 35%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(42, 40, 39) 0%,
+    rgb(71, 72, 70) 35%,
+    rgb(129, 129, 129) 100%
   );
   text-align: center;
   margin-top: 20px;
 }
 
+.navbar .navBtn {
+  background: transparent;
+  margin-top: 50px;
+  border-style: none;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(31, 25, 25);
+}
+
+.navBtn {
+  width: 30px;
+  margin: 0;
+  background: transparent;
+}
+
 /* Timer ----------------------------------- */
 .timer {
-  margin-left: 35%;
+  margin-left: 30%;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 400px;
+  width: 600px;
   text-align: center;
   justify-content: center;
   /* background: rgb(0, 212, 255, 1); */
+
   background: transparent;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  font-size: 8vw;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 100px;
+  color: #000000;
+  text-shadow: 0 10px 7px rgba(0, 0, 0, 0.4), 0 -1px 1px #dae10c;
+  letter-spacing: -3px;
+}
+
+#ProgressBar {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+}
+#ProgressBar::-webkit-progress-value {
+  background-color: black;
 }
 
 h1 {
@@ -51,41 +84,53 @@ h1 {
 }
 
 button {
+  color: black;
   display: inline-block;
   width: 500px;
-  background-color: rgb(175, 135, 165);
+  background-color: rgb(70, 67, 69);
   border-radius: 20%;
   letter-spacing: 2px;
   font-style: oblique;
+  font-weight: bold;
   padding: 15px;
   margin: 10px;
 }
 
 #next-button {
-  background-color: cadetblue;
-  width: 250px;
+  background-color: rgb(51, 46, 46);
+  border: 4px solid black;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+}
+
+#replay-button {
+  background-color: rgb(51, 46, 46);
+  border: 4px solid black;
+  color: white;
+  font-weight: bold;
+  width: 200px;
 }
 
 button:hover {
+  color: black;
   cursor: pointer;
   transform: scale(1.05);
   border: 2px solid black;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 10px;
 }
 
 .correct {
-  background-color: hsl(120, 44%, 70%);
-  color: azure;
-  
+  background-color: hsl(120, 72%, 23%);
+  color: black;
 }
 
 .incorrect {
-  background-color :rgb(218, 74, 74);
-  color: azure;
+  background-color: rgb(155, 14, 14);
+  color: black;
 }
 
-
-.navbar button{
+.navbar button {
   width: 300px;
   display: inline-block;
   background-color: rgb(131, 131, 198);
